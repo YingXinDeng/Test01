@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    {% for field in testf %}
+        {{ field.label }} : {{ field }}
+        <span style="color: darkred">{{ field.errors }}</span>
+    {% endfor %}
+</form>
+</body>
+<style>
+    input-content{
+        width: 223px;
+    }
+</style>
+</html>

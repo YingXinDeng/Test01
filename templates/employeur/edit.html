@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>打卡</title>
+ <style>
+  form {
+   margin: 20px auto;
+   width: 500px;
+   border: 1px solid #ccc;
+   padding: 20px
+  }
+ </style>
+</head>
+<body>
+<form method="post" action="../edit/">
+ {% csrf_token %}
+ <input type="hidden" name="id" value="{{ Employee.0 }}"/>
+ <table>
+  <tr>
+   <th>name</th>
+   <td>{{ Employee.2 }}</td>
+  </tr>
+  <tr>
+   <th>numero</th>
+   <td>{{ Employee.1 }}</td>
+  </tr>
+     <tr>
+   <th>check_in_time</th>
+   <td>{{ Employee.3 }}</td>
+  </tr>
+     <tr>
+   <th>check_out_time</th>
+   <td><input name="check_out_time" value="{{ Employee.4 }}"/></td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <input type="submit"/>
+   </td>
+  </tr>
+ </table>
+</form>
+</body>
+</html>

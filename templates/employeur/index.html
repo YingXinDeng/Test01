@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<style type="static/css"></style>
+<head>
+ <meta charset="UTF-8">
+ <title>签到列表</title>
+</head>
+<body>
+<table border="1px" width="100%" style="border-collapse: collapse;">
+ <a href="../add">add</a>
+ <tr>
+  <th>Order</th>
+  <th>Numero</th>
+  <th>Name</th>
+  <th>checkin</th>
+  <th>checkout</th>
+ </tr>
+ {% for emp in user_list %}
+  <tr>
+   <td align="center">{{ forloop.counter }} </td>
+   <td align="center">{{ emp.employ_no }} </td>
+   <td align="center">{{ emp.employ_name }} </td>
+   <td align="center">{{ emp.employ_time_in }} </td>
+   <td align="center">{{ emp.employ_time_out }} </td>
+   <td align="center">
+       <a href="../check_i/?id={{ emp.id }}">
+           <button>上班打卡</button>
+           </a>
+       <a href="../check_o/?id={{ emp.id }}">
+            <button>下班打卡</button>
+    </a>
+  </tr>
+ {% endfor %}
+</table>
+
+</body>
+</html>

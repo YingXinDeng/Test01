@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>company management</title>
+</head>
+<body>
+
+
+<div class="header">
+</div>
+
+<div class="topnav">
+                  <a href="#">ARRIVE</a>
+                  <a href="#">CHANGE</a>
+                  <a href="#">INFOS</a>
+                  <a href="#">APPRT</a>
+                    <div class="right_dropdown">
+                         <span>COUNTRY</span>
+                        <div class="dropdown-content">
+                            <p>France</p>
+                            <p>China</p>
+                            <p>Germany</p>
+                        </div>
+                    </div>
+                  <div class="right_dropdown">
+                  <span>WAREHOUSE</span>
+                    <div class="dropdown-content">
+                        <p>Number 1</p>
+                        <p>Number 2</p>
+                    </div>
+                  </div>
+
+            <div class="search">
+                      <form>
+                           <input type="submit" value="搜索" class="search1">
+                          <input type="text" class="content1">
+                      </form>
+
+                  </div>
+</div>
+
+
+    <a href="#" style="float:right">login</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>标题</h2>
+      <h5>2022 年 4 月 17日</h5>
+      <div class="fakeimg" style="height:200px;">
+
+      </div>
+      <p>一些文本...</p>
+      <p>是技术，更是梦想！！</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>关于我</h2>
+      <div class="fakeimg" style="height:100px;">图片</div>
+      <p>关于我的一些信息..</p>
+    </div>
+    <div class="card">
+      <h3>右边下面</h3>
+      <div class="fakeimg"><p>图片</p></div>
+      <div class="fakeimg"><p>图片</p></div>
+      <div class="fakeimg"><p>图片</p></div>
+    </div>
+    <div class="card">
+      <h3>关注我</h3>
+      <p>文本...</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>底部</h2>
+</div>
+
+</body>
+
+
+<style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* 头部标题 */
+.header {
+  padding: 20px;
+  text-align: center;
+  background: rgb(207, 238, 238);
+}
+
+.header h1 {
+  font-size: 10px;
+}
+
+/* 导航条 */
+.topnav {
+  overflow: hidden;
+  background-color: #9d9d9d;
+}
+
+/* 导航条链接 */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* 链接颜色修改 */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* 下拉菜单 */
+.right_dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+}
+.right_dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+ .search{
+  float: right;
+  width: 200px;
+  margin-top: 10px;
+  position: absolute;
+  top: 28px;
+  right: 53px;
+}
+.search form{
+  height: 50px;
+  width: 296px;
+}
+
+.content1{
+  display: block;
+  width: 223px;
+  height: 48px;
+  border: 1px solid #e0e0e0;
+  padding: 0 10px;
+  float:right;
+
+}
+
+.search1{
+  width: 49px;
+  height: 49px;
+  float: right;
+}
+
+.list li:hover{
+  color: rgb(168, 81, 81);
+  font-size: larger;
+}
+
+
+
+
+
+
+
+/* 创建两列 */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* 右侧栏 */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* 图像部分 */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* 文章卡片效果 */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* 列后面清除浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 底部 */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+
+
+
+</style>
+
+</html>
